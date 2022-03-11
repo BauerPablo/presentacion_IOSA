@@ -1,0 +1,17 @@
+{% extends 'layouts/layouts.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+    <div class="intro">
+        <div class="logoar">
+            <img src="{% static 'images/70+logo.svg' %}"/>
+        </div>
+        <div class="skyteam">
+            <img src="{% static 'images/Logo_ST_0.svg' %}"/>
+        </div>
+    </div>
+{% endblock content %}

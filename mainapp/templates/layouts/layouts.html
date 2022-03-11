@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta character="UTF-8"/>
+    <title>
+        {% block title %}
+        
+        {% endblock title %}
+        | Aerolíneas Aergentinas
+    </title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+    <link rel="icon" type="image/gif" href="{% static 'images/condor_chico.gif' %}" />
+</head>
+
+<body>
+    <!--Cabecera-->
+    <header>
+        <div id="logotipo">
+            <a href="{% url 'inicio' %}">
+                <img src="{% static 'images/logo.png'%}"/>
+            </a>
+            <h1> Presentación IOSA {% now 'M/Y' %}
+        </div>
+    </header>
+
+    <!--Barra de navegación-->
+    
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'inicio' %}">Inicio</a>
+            </li>
+            {% for page in pages %}
+                <li>
+                    <a href="{% url 'pagina' page.2 %}">{{page.1}}</a>
+                    <ul>
+                        {% for isarp in isarps %}
+                            {% if isarp.3 == page.3 %}
+                                <li>
+                                    <a href="{% url 'isarps' isarp.2 %}">{{isarp.1}}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </li>                            
+            {% endfor %}           
+        </ul>
+    </nav>
+
+    <!-- Contenido-->
+
+    <div id="content">
+        <div class="box">
+            {% block content %}
+
+            <!--Lo que va adentro de BOX-->            
+
+            {% endblock content %}
+        </div>
+        {% block prevnext %}
+        
+        {% endblock prevnext %}
+    </div>
+</body>
+
+<!--Footer-->
+
+<footer>
+    Presentación IOSA &copy; Aerolíneas Argentinas - {% now "M/Y" %}
+</footer>
+
+</html>

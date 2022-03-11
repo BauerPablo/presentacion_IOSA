@@ -1,0 +1,37 @@
+{% extends 'layouts/layouts.html' %}
+
+{% block title %}
+    {{isarp.title_isarp}}
+{% endblock title %}
+
+{% block content %}
+    <h1 class="title">{{isarp.title_isarp}}</h1>
+
+    <p>
+        {{isarp.content_isarp|safe}}
+    </p>
+
+{% endblock content %}
+{% block prevnext %}
+    <div class="prevnext">
+    {% if isarp.previous %}
+        <div class="left">
+            <ul>
+                <li>
+                    <a href="{% url 'isarps' isarp.previous.slug_isarp %}"> &laquo; previous </a>
+                </li>
+            </ul>
+        </div>
+    {% endif %}
+    
+    {% if isarp.next %}
+        <div class="right">
+            <ul>
+                <li>
+                    <a href="{% url 'isarps' isarp.next.slug_isarp %}">next &raquo;</a>
+                </li>
+            </ul>
+        </div>
+    {% endif %}
+    </div>
+{% endblock prevnext %}

@@ -1,0 +1,282 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background-color: #F2F2F2;
+}
+
+/*Estilo de cabecera*/
+
+header{
+    width: 1250px;
+    height: 120px;
+    background-color: #0075C9;
+    margin: 0px auto;
+    box-shadow: 0px 5px 10px gray;
+}
+
+#logotipo{
+    width: 60%;
+    height: 120px;
+    margin: 0px auto;
+    margin-bottom: 10px;
+}
+
+#logotipo h1{
+    display: block;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: white;
+    float: left;
+    font-size: 35px;
+}
+
+#logotipo img{
+    display: block;
+    float: left;
+    width: 200px;
+    margin: 5px;
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+/*Estilos de barra de navegación*/
+
+nav{
+    width: 1250px;
+    height: 40px;
+    background-color: #0067b1;
+    margin: 0px auto;
+    box-shadow: 0px 5px 10px gray;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+nav > ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+nav > ul > li{
+    float: left;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+nav > ul > li > a{
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #e5e9ec;
+}
+
+nav > ul > li > a:hover{
+    background-color: white;
+    color: #0075C9;
+    transition: all 400ms;
+    box-shadow: 0px 0px 5px gray inset;
+}
+
+nav > ul > li > ul{
+    display: none;
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    width: 180px;
+    box-shadow: 0px 2px 2px gray;
+}
+
+nav > ul > li:hover > ul{
+    display: block;
+    color: white;
+    margin: 0px;
+    list-style: none;
+}
+
+nav > ul > li:hover > ul > li{
+    background-color: #F2F1F0;
+    border-bottom: 1px solid #d6d6d6;
+    display: block;
+    color: white;
+    padding-left: 5px;
+    font-size: 13px;
+    margin: 0px;
+    list-style: none;
+    transition: 400ms;
+}
+
+nav > ul > li:hover > ul > li a{
+    color: #666;
+}
+
+nav > ul > li:hover > ul > li:hover {
+    background-color: #0075C9;
+    box-shadow: 0px 0px 5px gray inset;
+}
+
+nav > ul > li:hover > ul > li:hover a{
+    display: block;
+    color: white;
+}
+
+/*Estilos en la caja de contenido*/
+
+#content{
+    width: 1250px;
+    min-height: 450px;
+    margin: 0px auto;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.box{
+    background-color: white;
+    width: 95%;
+    box-shadow: 0px 0px 10px lightgray;
+    margin: 0px auto;
+    border-radius: 5px;
+    padding: 20px;
+    min-height: 450px;
+    border: 1px #ddd;
+    line-height: 25px;
+}
+
+.box p{
+    width: 80%;
+    margin: 0px auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.box ul li{
+    width: 70%;
+    margin: 0px auto;
+}
+
+.box ol{
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+.box table{
+    border-collapse: collapse;
+    margin: 0px auto;
+    margin-bottom: 25px;
+}
+
+.box table tbody{
+    text-align: justify;
+}
+
+.box table tbody tr td{
+    padding: 5px;
+}
+
+.title{
+    color: #444;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-bottom: 35px;
+    margin-top: 5px;
+}
+
+.box .intro{
+    display: block;
+    padding-left: 150px;
+    padding-top: 150px;
+}
+
+.box .intro .logoar img{
+    display: block;
+    float: left;
+    width: 70%;
+}
+
+.box .intro .skyteam img{
+    display: block;
+    float: left;
+    width: 15%;
+    margin: 0px auto;
+}
+
+.prevnext{
+    width: 1200px;
+    height: 40px;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+
+.left ul{
+    list-style: none;
+    text-decoration: none;
+    width: 10%;
+    height: 40px;
+    float: left;
+    background-color: #0075C9;
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px gray;
+}
+
+.right ul{
+    list-style: none;
+    text-decoration: none;
+    width: 10%;
+    height: 40px;
+    float: right;
+    background-color: #0075C9;
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px gray;
+}
+
+.left ul:hover{
+    background-color: white;
+    transition: 400ms;
+}
+
+.right ul:hover{
+    background-color: white;
+    transition: 400ms;
+}
+
+.right ul li a{
+    float: right;
+    color: white;
+    line-height: 40px;
+    padding-right: 20px;
+}
+
+.left ul li a{
+    color: white;
+    float: left;
+    margin: 0px auto;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+.left ul li a:hover{
+    color: #0075C9;
+}
+
+.right ul li a:hover{
+    color: #0075C9;
+}
+
+footer{
+    background-color: rgb(97, 97, 97);
+    margin: 0px auto;
+    height: 60px;
+    width: 1250px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 2px;
+}

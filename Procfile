@@ -1,0 +1,1 @@
+web: gunicorn presentacionIOSA.wsgi --log-file -
